@@ -1,0 +1,119 @@
+:root {
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Tomato: hsl(4, 100%, 67%);
+}
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+.row-img {
+    text-align: center;
+}
+
+.child2 {
+    padding: 2em;
+}
+
+#errormsg {
+    margin-left: auto;
+    font-size: 12px;
+    color: red;
+}
+
+.row {
+    width: 100%;
+    max-width: 428px;
+    margin-inline: auto;
+}
+
+.benefits-container  {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#email-input {
+    box-sizing: border-box;
+    padding: 1.2em;
+    margin-block: .7em;
+    border: 1px solid var(--Grey);
+    border-radius: 10px;
+    width: 100%;
+}
+
+#email-input:focus {
+    outline: none;
+    border-color: var(--Dark-Slate-Grey);
+}
+
+.btn {
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    padding: 1.2em;
+    margin-block: .7em;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+}
+.btn:hover {
+    background-color: var(--Tomato);
+}
+
+.hidden,
+.hidden-2 {
+    display: none;
+}
+
+.success-container {
+    position: absolute;
+    top: 20%;
+    background-color: var(--Charcoal-Grey);
+    padding: 2em;
+    width: 80%;
+    border-radius: 10px;
+    margin-inline: auto;
+}
+.success-msg {
+    border-radius: 10px;
+    width: 85%;
+    margin-inline: auto;
+    margin-block: 1em;
+    padding: 1em;
+    background-color: var(--White);
+}
+#user-email {
+    width: 50%;
+}
+
+@media(min-width: 600px) {
+    .row {
+        display: flex;
+        align-items: center;
+        max-width: 750px;
+    }
+    .child1 {
+        order: 1;
+    }
+    .child2 {
+        order: 0;
+    }
+    .row-img {
+        content: url('assets/images/illustration-sign-up-desktop.svg');
+    }
+
+    .success-container {
+        left: 25%;
+        right: 25%;
+        top: 0%;
+        border-radius: 10px;
+        padding: 6em;
+    }
+}
