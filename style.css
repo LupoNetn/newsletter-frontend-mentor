@@ -78,6 +78,7 @@ img {
     background-color: var(--Charcoal-Grey);
     padding: 2em;
     width: 100%;
+    box-sizing: border-box;
     border-radius: 10px;
     margin-inline: auto;
 }
