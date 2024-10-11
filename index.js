@@ -1,4 +1,5 @@
 const form = document.getElementById('form')
+const row = document.querySelector('.row')
 const email = document.getElementById('email-input');
 const emailRegex =  /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const errorMessage = document.getElementById('errormsg')
@@ -33,6 +34,8 @@ submitButton.addEventListener('click', (e) => {
         hiddenDisplay1.classList.remove('hidden')
         hiddenDisplay2.classList.add('success-msg');
         hiddenDisplay2.classList.remove('hidden-2')
+        row.classList.add('hidden');
+        row.classList.remove('row')
     } else {
         errorMessage.innerHTML = 'enter a valid email'
         email.style.borderColor = 'red'
@@ -57,4 +60,6 @@ dismissButton.addEventListener('click', () => {
     hiddenDisplay1.classList.add('hidden')
     hiddenDisplay2.classList.remove('success-msg');
     hiddenDisplay2.classList.add('hidden-2')
+    row.classList.remove('hidden');
+    row.classList.add('row')
 })
